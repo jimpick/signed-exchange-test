@@ -1,3 +1,5 @@
 *.swp
 content/signed
 sw-ipfs-dist.js
+priv.key
+server.key
