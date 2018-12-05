@@ -7,7 +7,7 @@ for f in `find . -maxdepth 1 -type f | grep -v \.sh$ | sed 's,^\./,,'`; do
 done
 #ipfs add -r signed
 HASH=$(ipfs add -Q -r signed)
-URL=https://ipfs.jimpick.com/ipfs/$HASH
+URL=https://ipfs.io/ipfs/$HASH
 echo $URL
 echo $URL | pbcopy
 (cd ..; ./publish-sw-ipfs.sh $HASH)

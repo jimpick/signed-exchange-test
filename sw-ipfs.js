@@ -22,7 +22,7 @@ function handler ({url, event}) {
       .then(ipfsHash => {
         if (!ipfsHash) return
         fetchTime = Date.now()
-        baseUrl = `https://ipfs.jimpick.com/ipfs/${ipfsHash}`
+        baseUrl = `https://ipfs.io/ipfs/${ipfsHash}`
         console.log('Loading from IPFS:', baseUrl)
         return respond()
       })
@@ -37,7 +37,8 @@ function handler ({url, event}) {
     let {pathname} = url
     if (pathname === '/') pathname = '/index.html'
     const redirectUrl = `${baseUrl}${pathname}.sxg`
-    return Response.redirect(redirectUrl)
+    // const redirectUrl = `${baseUrl}`
+    return Response.redirect(redirectUrl, 301)
   }
 }
 
