@@ -10,10 +10,11 @@ fi
 mkdir -p signed
 
 gen-signedexchange \
-  -uri https://signed.jimpick.com/$1 \
+  -uri https://ipfs.v6z.me/$1 \
   -content $1 \
   -certificate ../cert.pem \
   -privateKey ../priv.key \
-  -certUrl https://signed-cdn.jimpick.com/cert.cbor \
-  -validityUrl https://signed.jimpick.com/resource.validity.msg \
+  -certUrl https://cbor.jimpick.com/ipfs.v6z.me/cert.cbor \
+  -validityUrl https://ipfs.v6z.me/resource.validity.msg \
   -o signed/$1.sxg
+

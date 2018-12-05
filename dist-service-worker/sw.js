@@ -13,7 +13,7 @@ workbox.routing.registerRoute(
   handler
 );
 
-const ipns = 'QmZWWM9nz5HTqdVuURN1YGskfc3vv24BSoQnwc3QYcmy82:'
+const ipns = 'QmZWWM9nz5HTqdVuURN1YGskfc3vv24BSoQnwc3QYcmy82'
 const baseUrl = `https://ipfs.io/ipns/${ipns}`
 
 function handler ({url, event}) {
