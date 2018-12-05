@@ -22,7 +22,7 @@ function handler ({url, event}) {
       .then(ipfsHash => {
         if (!ipfsHash) return
         fetchTime = Date.now()
-        baseUrl = `https://ipfs.io/ipfs/${ipfsHash}`
+        baseUrl = `https://ipfs.io/ipfs/${ipfsHash.trim()}`
         console.log('Loading from IPFS:', baseUrl)
         return respond()
       })
