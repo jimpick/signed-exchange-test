@@ -17,7 +17,7 @@ workbox.routing.registerRoute(
 
 function handler ({url, event}) {
   if (!baseUrl || fetchTime < Date.now() - 1000) {
-    return fetch('/ipfs-hash.txt')
+    return fetch('https://ipfs.io/ipns/ipfs.v6z.me/ipfs-hash.txt')
       .then(res => res.text())
       .then(ipfsHash => {
         if (!ipfsHash) return
