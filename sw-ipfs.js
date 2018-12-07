@@ -36,7 +36,7 @@ function handler ({url, event}) {
   function respond () {
     let {pathname} = url
     if (pathname === '/') pathname = '/index.html'
-    const redirectUrl = `${baseUrl}${pathname}.sxg`
+    const redirectUrl = `${baseUrl}${pathname}.sxg#x-ipfs-companion-no-redirect`
     // const redirectUrl = `${baseUrl}`
     return Response.redirect(redirectUrl, 301)
   }

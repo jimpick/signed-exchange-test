@@ -16,6 +16,6 @@ gen-signedexchange \
   -privateKey ../priv.key \
   -certUrl https://cbor.jimpick.com/ipfs.v6z.me/cert.cbor \
   -validityUrl https://ipfs.v6z.me/resource.validity.msg \
-  -expire 72h0m0s \
+  -expire 168h0m0s \
   -o signed/$1.sxg
 
